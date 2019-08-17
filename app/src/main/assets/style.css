@@ -1,0 +1,995 @@
+/* Cambios de tamaño: paddings, margins, width... */
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable {
+    top: 0px !important;
+    width: 101% !important;
+    left: auto !important;
+    float: right !important;
+}
+
+#destinatarios_editar .destinatario img {
+    height: 10em;
+    width: 8em;
+}
+
+div.wrapMensaje .texto {
+    overflow: scroll;
+}
+
+#editarMensaje .recuadro {
+    overflow: auto !important;
+}
+
+textarea.datosMemo {
+    margin-bottom: 3%;
+}
+
+div#r0.director, .cuadro-tirador legend {
+    padding: 3% !important;
+}
+
+.personaje {
+    width: 90% !important;
+}
+
+.borrarPj {
+    width: 4em !important;
+    height: 4em !important;
+}
+
+.borrarPj img{
+    width: 4em !important;
+    height: 4em !important;
+}
+
+.add {
+    width: auto !important;
+}
+
+form#addPj label {
+    font-size: inherit !important;
+}
+
+form#addPj textarea#descripcionPj {
+    font-size: inherit !important;
+    border: 1px solid #C17878;
+}
+
+div#dialogConfigurar {
+    height: auto !important;
+}
+
+form#addPj input.boton {
+    width: auto !important;
+}
+
+.novedadesDesde input[type="submit"] {
+    font-size: inherit;
+}
+
+.adding{
+    height: auto !important;
+}
+
+div#opciones_globales a {
+    margin: 1%;
+    display: inline-flex;
+}
+
+#editarMensaje .botones input, #editarMensaje .botones a {
+    padding: 1% !important;
+}
+
+.detallePJ {
+    margin-top: 5% !important;
+    display: block !important;
+}
+
+div#dialogWrapper, div#dialogJugadores {
+    height: auto !important;
+}
+
+.listaPartidas img {
+    width: 12em !important;
+    height: 17em !important;
+    border: 3px solid #663254;
+}
+
+.listaPartidas {
+    padding-bottom: 3em !important;
+}
+
+a.btnBorrar, a.btnEditar {
+    background-size: cover;
+    width: 3.5em;
+    height: 3.5em;
+}
+
+.Citar, .Spoiler {
+    font-size: 3.5em;
+    line-height: 1.5em;
+}
+
+div#dialogJugadores ul {
+    padding: 3%;
+}
+
+div#dialogJugadores ul li {
+    margin-bottom: 1%;
+}
+
+div#avatar {
+    width: 10% !important;
+    position: inherit;
+    float: left;
+}
+
+a.delPj {
+    background-size: cover !important;
+    width: 1em !important;
+    height: 1em !important;
+}
+
+div#uCarisma a {
+    margin-top: 3%;
+}
+
+div#uCarisma {
+    margin-top: 1%;
+    width: 40%;
+}
+
+.columna.respuestas {
+    text-align: center;
+}
+
+div#avatar img {
+    width: 3.6em !important;
+    height: 5em;
+}
+
+.destinatarios img {
+    width: 6em;
+    height: 7em;
+}
+
+.destinatarios em {
+    display: block;
+    margin-top: 1% !important;
+    margin-bottom: 1% !important;
+}
+
+body {
+padding-bottom:3em;
+}
+
+div.notas {
+    margin-top: 5% !important;
+    font-size: 0.9em;
+}
+
+.notas h3 {
+    padding-bottom: 5%;
+}
+
+#dialogWrapper p.pjjugadores {
+    position: initial !important;
+}
+
+div#login {
+    width: 95%;
+    background-size: cover;
+    padding: 3%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+.novedadesDesde span {
+    display: block;
+    font-style: italic;
+    padding-bottom: 0.5em !important;
+}
+
+.novedadesDesde input[name="btnMostrarFecha"] {
+    padding: 0.3em !important;
+    margin-top: 0em !important;
+    border: 1px solid;
+    background-color: #6e4e51;
+    color: #f7f7f7;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'OFLSortsMillGoudyRegular' !important;
+    height: auto !important;
+    border-radius: 5%;
+}
+
+.novedadesDesde label {
+    margin-top: 0.5em;
+}
+div#pfc_input_container td {
+    display:block;
+}
+
+div#pfc_input_container table {
+    width: 100%;
+}
+
+#login input:read-write, #buscadorPjs input, div.tiradas h6 {
+    padding: 0.5em !important;
+}
+
+#login input[type="submit"], a.btnAddReplica, .novedadesDesde.recuadro input[name="btnFijarFecha"], input#btnNuevo, #addVip input[type="submit"], .botonform input[type="submit"], #operaciones a {
+    border: 1px solid;
+    background-color: #6e4e51;
+    color: #f7f7f7;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'OFLSortsMillGoudyRegular' !important;
+    padding: 0.6em !important;
+    height: auto !important;
+    margin-top: 0.2em !important;
+    border-radius: 5%;
+}
+
+form#formTiradas {
+    width: 100%;
+    float: none;
+}
+
+td.asunto {
+    padding-left: 3% !important;
+    text-transform: UPPERCASE;
+}
+
+div#operaciones {
+    margin-left: -1.5% !important;
+    margin-bottom: 1%;
+    margin-top: -2%;
+}
+
+  #operaciones a {
+    float: none !important;
+    border-radius: 0% !important;
+    width: auto !important;
+    display: block;
+    font-size: 3em !important;
+}
+
+div.noticia span.fecha {
+    font-size: inherit !important;
+}
+
+span.noleidos {
+    font-size: inherit !important;
+}
+
+.recuadroInterno img.portadaPartida {
+    width: 25% !important;
+}
+
+table#bmlistado {
+    font-size: inherit !important;
+    width: 100% !important;
+}
+
+.btnBorrar{
+    margin-right:2em;
+}
+
+div.avatar a.btnEditar, div.avatar a.btnBorrar {
+    font-size: 1.5em !important;
+    float: right;
+    margin-right: 2px !important;
+}
+
+div.botonera{
+        border-spacing: 0.5em;
+        padding: 20px 8px;
+        text-align: left;
+        background-color: #6E4E51;
+        font-size: 10px;
+        color: #FFF;
+        margin: 0px;
+        border: none;
+}
+
+div.botonera a, div.md_acciones a {
+        display: inline-grid;
+        width: 29%;
+        height: 3em !important;
+        border-radius: 1% !important;
+        font-size: 3em !important;
+        margin-top: 5px !important;
+        text-transform: uppercase !important;
+        font-weight: bold !important;
+        font-family: 'OFLSortsMillGoudyRegular' !important;
+        border-spacing: initial;
+}
+
+ul.formulario-tirador input, a.boton {
+    border: 1px solid;
+    font-size: 1em;
+    padding: 0.3em !important;
+    height: auto !important;
+    margin-top: 0.2em !important;
+    border-radius: 5%;
+}
+
+#login input[type="submit"] {
+    width: 45% !important;
+}
+
+#login input, #buscadorPjs input,  {
+    width: 70%;
+    border-radius: 0.2em !important;
+    margin-top: 0.7em;
+}
+
+.pref_dcha input[type="checkbox"], input[type="radio"] {
+    -webkit-transform: scale(4);
+    margin-right: 5%;
+    margin-top: 7%;
+    margin-left: 5%;
+}
+
+div#colTiradas {
+    float: none;
+    width: 100%;
+}
+
+tr.mensaje input[type="checkbox"] {
+ -webkit-transform: scale(2);
+    margin-right: 5%;
+    margin-top: 7%;
+}
+
+ul.formulario-tirador input[type="radio"], ul.formulario-tirador input[type="checkbox"] {
+ -webkit-transform: scale(3);
+    margin-right: 5%;
+    margin-top: 7%;
+    margin-left: 5%;
+}
+
+
+#buscadorPjs input {
+    background-size: 2em;
+    background-position: right !important;
+    padding-left: 5% !important;
+    float: left !important;
+    font-size: 2em;
+}
+
+div#verTodos {
+     width: 70%;
+     padding: 0.5em;
+}
+
+.datosPersonaje {
+    height: auto !important;
+}
+
+.personaje {
+    width: 100% !important;
+}
+
+#dialogWrapper p.pjjugadores {
+    font-size: 2.5em !important;
+    margin-top: 5% !important;
+}
+
+#dialogWrapper span#clasePj {
+    font-size: inherit !important;
+}
+
+#dialogWrapper {
+    margin-bottom: 4% !important;
+}
+
+div#verTodos img {
+    margin-right: 3%;
+}
+
+div.selectorCarisma {
+    height: fit-content !important;
+    padding-bottom: 10em !important;
+
+}
+
+span.ui-icon.ui-icon-closethick {
+    background: url(https://www.materialui.co/materialIcons/content/backspace_grey_192x192.png) !important;
+    background-size: cover !important;
+    width:100% !important;
+    height:100% !important;
+}
+
+a.ui-dialog-titlebar-close.ui-corner-all {
+    width: 1.2em;
+    height: 1.3em;
+    top: 30%;
+    opacity: 0.7;
+}
+
+#login p {
+    margin-top: 1.5em !important;
+}
+
+#bHerramientas ul li {
+    width: 27%;
+    margin-right: 3%;
+}
+
+#bHerramientas a, .recuadro .iconoTirar img {
+    width: 100% !important;
+}
+
+div.recuadro a.iconoTirar {
+    width: 6em !important;
+}
+
+div#bHerramientas {
+    text-align: inherit !important;
+}
+
+.listaUsuarios {
+    height: 5em;
+}
+
+div#columna1 {
+    margin-top: 3%;
+}
+
+.columna {
+    float: none !important;
+    width: 100% !important;
+}
+
+.carismaPOS, .carismaNEU, .carismaNEG {
+    background-size: 50px 50px !important;
+    height: 1em !important;
+}
+
+div#iconosUsuario a {
+    width: 2.5em;
+    height: 2.5em;
+    background-size: cover;
+}
+
+.menuPartida {
+    width: 5em !important;
+    padding: 0.5em !important;
+}
+
+ul.paginador li {
+    padding-top: 2em !important;
+    padding-bottom: 1em !important;
+    margin-bottom: 1em;
+}
+
+ul.paginador {
+    margin: 3em !important;
+}
+
+#uCarisma a span {
+    padding-left: 55px;
+}
+
+#uCarisma a {
+    margin-left: 15px;
+    padding-top:20px;
+}
+
+div#wrapper {
+    padding: 0px !important;
+}
+
+div#contenedor {
+    padding: 2%;
+}
+
+div#datosPartida .recuadro table td {
+    padding-top: 21px !important;
+}
+
+#datosPartida td > a >img {
+    width: 3em;
+    height: 4em;
+}
+
+div.escena {
+    margin-top: 5%;
+}
+
+div.partidas {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+a.tituloEscena {
+    padding-left: 0px !important;
+    display: block;
+    line-height: 1;
+}
+
+div#escenas {
+    margin-left: 0px !important;
+}
+
+input#btnNuevo {
+    padding: 0.2em;
+}
+
+h3#escena span {
+    padding-right: 6%;
+    background-size: 40px !important;
+}
+
+a.tituloEscena {
+    background-image: none !important;
+    padding-left: 6%;
+}
+
+#listaEscenas li{
+    margin-top: 2% !important;
+}
+
+#listaEscenas {
+    margin-top: 0px !important;
+    padding: 2%;
+}
+
+#listaEscenas ul {
+    width: 100% !important;
+}
+
+.pref_izda {
+    width: 100% !important;
+}
+
+.pref_dcha {
+     font-size: 3em !important;
+     width: 100% !important;
+ }
+
+textarea {
+    width: 100%;
+    min-height: 8em;
+}
+
+.pref_dcha input#prefs_fecha_nacimiento_ano {
+    width: 30% !important;
+    height: 10%;
+}
+
+div#navegador, div#ppal, #datosPartida {
+    float: none !important;
+}
+
+#uCarisma, #uNombre, #uNivel {
+    float:left !important;
+}
+
+div#navegador {
+    display: inline-block;
+}
+
+img.portadaPartida {
+    float: right;
+    width: 50em;
+}
+
+#datosPartida table {
+    display: inline-block;
+    width: 60% !important;
+}
+
+div#contenedor, div#ppal, div#navegador, div#usuario,
+#datosUsuario .partidas, #datosUsuario .conectados, #datosUsuario, .noticiasCarrusel,
+ .columna50, .columna25, #datosPartida {
+    width: 100% !important;
+}
+
+#datosPartida h2>img {
+    width: 40% !important;
+    max-width: 1000px !important;
+}
+
+.recuadro {
+    padding: 3%;
+}
+
+div#dialogVips ul li {
+    height: auto !important;
+    padding: 2%;
+}
+
+.columna50, .columna25 {
+    width: 100%;
+}
+
+#datosPartida table{
+    width: 60% !important;
+    margin-bottom:1%;
+}
+
+#datosPartida h4 {
+    margin-top: 5%;
+}
+
+.basicos, div.partida hr.hidden.clear  {
+    clear: none !important;
+}
+
+div.partida hr.hidden.clear {
+    visibility: visible;
+    margin: 5%;
+}
+
+div#textoNoticia1 {
+    display: block;
+    width: 80%;
+}
+
+#bHerramientas a {
+    padding-top: 12% !important;
+    padding-bottom: 12% !important;
+}
+
+.listaPartidas h3 {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.3em;
+}
+
+.ui-tabs-panel span {
+    margin-top: 3%;
+}
+
+div.ultimo_mensaje{
+    margin-top: 2% !important;
+    padding: 2% !important;
+    border-radius: 2%;
+}
+
+#destinatarios_editar .destinatario {
+    padding: 1% !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+#destinatarios_editar .destinatario p {
+    display: inline;
+    margin-left: 0.4em !important;
+}
+
+
+div#emisores select, .cuadro-tirador select, .novedadesDesde select{
+    font-size: inherit;
+    padding: 0.3em;
+}
+
+.novedadesDesde input[name="btnFijarFecha"] {
+    width: 100%;
+}
+
+.cuadro-tirador .inputTirar {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'OFLSortsMillGoudyRegular' !important;
+    margin: 0 auto;
+}
+
+span.ayuda-tirador {
+    font-size: inherit !important;
+    display: block !important;
+}
+
+/* Tamaños de letra */
+input#btnNuevo, span.fechaApuntado {
+    font-size: 0.8em !important;
+}
+
+div#uCarisma a, .pref_dcha label, #destinatarios_editar .destinatario, ul.formulario-tirador input {
+    font-size: 1em !important;
+}
+
+#login input[type="submit"], .botonform input[type="submit"], #login a, #login p{
+    font-size:1em;
+}
+
+form#equipo_pj table.gridDatos th,  form#equipo_pj table.gridDatos td {
+    font-size: 1.2em !important;
+}
+
+#login label, #login input:read-write {
+    font-size: 1.3em;
+}
+
+.detallePJ div#solapas h2, h3, h4, h5, div#solapas, #dialogWrapper span#nombrePj, div.warning, .seccionActividad .btnMasAct {
+     font-size: 1.6em !important;
+}
+
+.detallePJ div#solapas p, div#solapa-1 .recuadro p, div#solapa-6 h3, div#solapa-0 p, div#solapa-2 p, div.recuadro.partidas p, .informacionUsuario, .detallePJ div#solapas table, .detallePJ div#solapas form, #buscadorPjs input, form#addDirector, .avatar a {
+     font-size: 2em !important;
+ }
+
+.editar_pj, a.btnAddReplica {
+     font-size: 2em;
+}
+
+.fecha, ul.paginador li a, .basicos, div#listadoForo, #listaEscenas ul a, #datosPartida td, div#solapas ul li a, .destinatarios em,
+ .ui-tabs-panel span, td.remitentes, td.asunto, div#dialogEscenas, #dialogWrapper p.pjjugadores {
+    font-size: 2.5em !important;
+}
+
+#buscadorPjs input:read-write,  div#dialogJugadores ul li, div#dialogVips a, div#emisores, .texto ul > li,
+#editarMensaje .botones input, div#pfc_channels, .novedadesDesde.recuadro, #editarMensaje .botones a, .fichaDatos .botones a, .fichaDatos .botones input, div.tiradas h6, form#formTiradas, #directores li, div#addJugador  {
+    font-size:3em
+}
+
+div.ultimo_mensaje, span.ui-button-text, div#solapa-1 h3, div#solapa-6 h2, div.recuadro.partidas h3, .md_cabecera, #mensajeria h4, .pref_dcha, div.botonera a, div.md_acciones a, form#addPj, #dialogConfigurar h4 {
+    font-size: 3em !important;
+}
+
+div#verTodos {
+    font-size: 3.2em;
+}
+
+#addVip input[type="submit"], .botonform input[type="submit"] {
+    font-size:3.5em;
+}
+
+p, .pj, #usuario, div.escena h4, ul.novedades > li, .personaje p {
+    font-size: 3.5em !important;
+}
+
+h2, #datosPartida h4,  div#opciones_globales a, textarea {
+     font-size: 4em !important;
+ }
+
+h3, .menuPartida, .listaPartidas h3 {
+     font-size: 4.5em !important;
+ }
+
+.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix {
+    font-size: 5em;
+}
+
+ /** COLORS, BORDERS, BACKGROUNDS **/
+
+span.fechaApuntado {
+    line-height:1.5em;
+    color: #938585;
+}
+
+div#escenas div.recuadro, div.columna.ui-sortable div.recuadro {
+    border: 2px solid;
+}
+
+#dialogJugadores span.personaje {
+    color: #995526 !important;
+}
+
+a.estado {
+    color: #6e4e54 !important;
+}
+
+div#dialogJugadores ul li a {
+    line-height: 1em;
+}
+
+#listaEscenas ul a {
+    line-height: 1.4em;
+}
+
+a.abierta img {
+    border-color: #cf30ff !important;
+    border-style: dotted !important;
+}
+
+div.novedades a, div.novedades a:active {
+    width: 100%;
+    background-size: 130px;
+    height: 45px;
+}
+
+div.novedades a.marcado {
+    background-position: -85px !important;
+}
+
+div.novedades a.no-leido {
+    background-position: -42px !important;
+}
+
+div.md_cabecera span.md_fechamensajes {
+    float: right;
+    width: auto !important;
+}
+
+/*** Secciones ocultas ****/
+a#iconoCreditos, a#iconosFicheros, a#iconoIncidencias, a#iconoCarnet, a#iconoCapataces, a#iconoPatrocinadores,
+ div.recuadro h2:nth-of-type(2), .cuaderno, #iconosUsuario, .botonesUsuario,
+ a#btnOcultarNavegador, div#ppal h1, div#ultimasNovedades, div#ultimoUsuario,
+  .conectados, div#reloj, div#cabecera, .cc-cookies, #logo, #mostrar_modulos, #bmlistado td.fecha {
+    display: none !important;
+}
+
+div#m_8, div#m_9, div#m_16m, div.md_cabecera span.md_texto {
+    display:none !important;
+}
+
+div:has(> div.listaPartidas) {
+    display: none !important;
+}
+
+div#datosUsuario, span#pfc_ping, a#pfc_logo, div#iconosListado, .seccionActividad .columna.ultimoMensaje, div#colChat div.recuadro strong>a:first-child {
+    display: none;
+}
+
+div.bordesup:first-of-type {
+    display: none;
+}
+
+/********************CHAT ******************/
+img#pfc_minmax {
+    width: 3em;
+}
+
+img.pfc_nickbutton {
+    width: 2em;
+}
+
+input#pfc_send {
+    font-size: 2.3em;
+    border: 1px solid;
+    background-color: #6e4e51 !important;
+    color: #f7f7f7 !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'OFLSortsMillGoudyRegular' !important;
+    padding: 0.6em !important;
+    height: auto !important;
+    margin-top: 0.2em !important;
+    border-radius: 5%;
+}
+
+input#pfc_words  {
+    width:80% !important;
+    font-size: 3em !important;
+    padding: 0.6em !important;
+    height: auto !important;
+    margin-top: 0.2em !important;
+}
+
+a.pfc_tabtitle img, div.pfc_nickwhois a img {
+    width: 1em;
+    height: 1.3em;
+}
+
+a.pfc_tabclose img {
+    width: 1em !important;
+    height: 2em;
+    margin-left: 0.5em !important;
+}
+
+img.pfc_nickwhois_close {
+    width: 1em !important;
+    height: 1em;
+}
+
+div.pfc_nickwhois a img {
+    border: none;
+    width: 15em;
+    height:20em;
+}
+
+div#pfc_channels_content {
+    height: 1000px !important;
+}
+
+span.pfc_words img {
+    width: 1.5em !important;
+}
+
+div.pfc_chat {
+    height: 100% !important;
+}
+
+div.pfc_online {
+    height: 100% !important;
+}
+
+p.pfc_nickwhois_pv a img {
+    display: none !important;
+}
+
+div#pfc_cmd_container img, div#pfc_bbcode_container img, div#pfc_smileys img {
+    width: 3em;
+    margin-top:1.5em;
+}
+
+.pfc_nickwhois {
+    position: static !important;
+}
+
+div.pfc_nickwhois table, .pfc_nickwhois_pv {
+    display:inline;
+}
+
+.pfc_nickwhois {
+    position: static !important;
+}
+
+@media screen and (min-aspect-ratio: 13/9) {
+   /* Landscape styles here */
+
+   /* Tamaños de letra */
+   input#btnNuevo, span.fechaApuntado {
+       font-size: 0.5em !important;
+   }
+
+   div#uCarisma a, .pref_dcha label, #destinatarios_editar .destinatario, ul.formulario-tirador input {
+       font-size: 0.6em !important;
+   }
+
+   #login input[type="submit"], .botonform input[type="submit"], #login a, #login p{
+       font-size:0.5em;
+   }
+
+   form#equipo_pj table.gridDatos th,  form#equipo_pj table.gridDatos td {
+       font-size: .8em !important;
+   }
+
+   #login label, #login input:read-write {
+       font-size: .8em;
+   }
+
+   .detallePJ div#solapas h2, h3, h4, h5, div#solapas, #dialogWrapper span#nombrePj, div.warning, .seccionActividad .btnMasAct {
+        font-size: 1.2em !important;
+   }
+
+   .detallePJ div#solapas p, div#solapa-1 .recuadro p, div#solapa-6 h3, div#solapa-0 p, div#solapa-2 p, div.recuadro.partidas p, .informacionUsuario, .detallePJ div#solapas table, .detallePJ div#solapas form, #buscadorPjs input, form#addDirector, .avatar a {
+        font-size: 1em !important;
+    }
+
+   .editar_pj, a.btnAddReplica {
+        font-size: 1em;
+   }
+
+   .fecha, ul.paginador li a, .basicos, div#listadoForo, #listaEscenas ul a, #datosPartida td, div#solapas ul li a, .destinatarios em,
+    .ui-tabs-panel span, td.remitentes, td.asunto, div#dialogEscenas, #dialogWrapper p.pjjugadores {
+       font-size: 1em !important;
+   }
+
+   #buscadorPjs input:read-write,  div#dialogJugadores ul li, div#dialogVips a, div#emisores,
+   #editarMensaje .botones input, div#pfc_channels, .novedadesDesde.recuadro, #editarMensaje .botones a, .fichaDatos .botones a, .fichaDatos .botones input, div.tiradas h6, form#formTiradas, #directores li, div#addJugador  {
+       font-size:1.5em
+   }
+
+   div.ultimo_mensaje, span.ui-button-text, div#solapa-1 h3, div#solapa-6 h2, div.recuadro.partidas h3, .md_cabecera, #mensajeria h4, .pref_dcha, div.botonera a, div.md_acciones a, form#addPj, #dialogConfigurar h4 {
+       font-size: 1.5em !important;
+   }
+
+   div#verTodos {
+       font-size: 2em;
+   }
+
+   #addVip input[type="submit"], .botonform input[type="submit"] {
+       font-size:2em;
+   }
+
+   p, .pj, #usuario, div.escena h4, ul.novedades > li, .personaje p {
+       font-size: 2em !important;
+   }
+
+   h2, #datosPartida h4,  div#opciones_globales a, textarea {
+        font-size: 2em !important;
+    }
+
+   h3, .menuPartida, .listaPartidas h3 {
+        font-size: 2em !important;
+    }
+
+   .ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix {
+       font-size: 3em;
+   }
+
+}
+
