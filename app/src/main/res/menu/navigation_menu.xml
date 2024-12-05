@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/partidas"
-            android:icon="@drawable/ic_partidas"
-            android:title="Principal"/>
-        <item
-            android:id="@+id/news"
-            android:icon="@drawable/ic_news"
-            android:title="Noticias"/>
-        <item
-            android:id="@+id/chat"
-            android:icon="@drawable/ic_messages"
-            android:title="Chat"/>
-        <item
-            android:id="@+id/messages"
-            android:icon="@drawable/ic_mp"
-            android:title="Mensajes privados (MPs)"/>
-        <item
-            android:id="@+id/profile"
-            android:icon="@drawable/ic_profile"
-            android:title="Perfil"/>
-        <item
-            android:id="@+id/settings"
-            android:icon="@drawable/ic_settings"
-            android:title="Ajustes"/>
-        <item
-            android:id="@+id/sign_out"
-            android:icon="@drawable/ic_power"
-            android:title="Salir"/>
-    </group>
+    <item
+        android:id="@+id/partidas"
+        android:icon="@drawable/ic_partidas"
+        android:title="Principal"/>
+    <item
+        android:id="@+id/news"
+        android:icon="@drawable/ic_news"
+        android:title="Noticias"/>
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/ic_messages"
+        android:title="Chat"/>
+    <item
+        android:id="@+id/messages"
+        android:icon="@drawable/ic_mp"
+        android:title="Mensajes privados (MPs)"/>
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_profile"
+        android:title="Perfil"/>
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Ajustes"/>
+    <item
+        android:id="@+id/sign_out"
+        android:icon="@drawable/ic_power"
+        android:title="Salir"/>
 </menu>
