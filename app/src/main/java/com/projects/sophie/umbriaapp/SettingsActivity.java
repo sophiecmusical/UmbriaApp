@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment;
 
 public class SettingsActivity extends AppCompatActivity {
     Toolbar toolbar;
-    Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -99,6 +99,22 @@ public class MainActivity extends AppCompatActivity {
 
         if (ckeditor && !tinyeditor) {
             webView.getSettings().setUserAgentString("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36");
+        } else if (tinyeditor) {
+            String script = "if (!document.querySelector('script[src=\"https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js\"]')) {" +
+                    "  var script = document.createElement('script');" +
+                    "  script.src = 'https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js';" +
+                    "  script.type = 'text/javascript';" +
+                    "  document.head.appendChild(script);" +
+                    "}";
+            webView.evaluateJavascript(script, null);
+
+            webView.evaluateJavascript("if (typeof tinymce !== 'undefined') {" +
+                    "tinymce.init({" +
+                    "selector: 'textarea', " +
+                    "plugins: 'advlist autolink lists link image charmap print preview anchor', " +
+                    "toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'" +
+                    "});" +
+                    "}", null);
         }
 
         webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
@@ -116,7 +132,22 @@ public class MainActivity extends AppCompatActivity {
             public void onPageFinished(WebView view, String url) {
                 progressBar.setVisibility(View.GONE);
                 swipeRefreshLayout.setRefreshing(false);
-                injectCSS();
+
+
+                if (user != null && pass != null) {
+                    String script = "var acceso = document.getElementsByName('ACCESO')[0];" +
+                            "var clave = document.getElementsByName('CLAVE')[0];" +
+                            "if (acceso && clave) {" +
+                            "acceso.value = '" + user + "';" +
+                            "clave.value = '" + pass + "';" +
+                            "}";
+
+                    webView.evaluateJavascript(script, null);
+                }
+                if (!url.contains("natilla.comunidadumbria.com")) {
+                    injectCSS();
+                }
+
                 super.onPageFinished(view, url);
             }
         });
@@ -176,10 +207,10 @@ public class MainActivity extends AppCompatActivity {
                 webView.loadUrl("https://www.comunidadumbria.com/");
             } else if (itemId == R.id.profile) {
                 webView.loadUrl("https://www.comunidadumbria.com/usuario/perfil");
+            } else if (itemId == R.id.forum) {
+                webView.loadUrl("https://www.comunidadumbria.com/comunidad/foros");
             } else if (itemId == R.id.messages) {
                 webView.loadUrl("https://www.comunidadumbria.com/usuario/mensajes");
-            } else if (itemId == R.id.chat) {
-                webView.loadUrl("https://www.comunidadumbria.com/chat/");
             } else if (itemId == R.id.settings) {
                 startActivity(new Intent(MainActivity.this, SettingsActivity.class));
             } else if (itemId == R.id.sign_out) {

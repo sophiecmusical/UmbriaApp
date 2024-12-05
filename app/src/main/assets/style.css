@@ -1,4 +1,9 @@
 /* Cambios de tamaño: paddings, margins, width... */
+
+#avisos {
+float: none;
+display: block;
+}
 .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable {
     top: 0px !important;
     width: 101% !important;
@@ -819,7 +824,7 @@ div:has(> div.listaPartidas) {
     display: none !important;
 }
 
-div#datosUsuario, span#pfc_ping, a#pfc_logo, div#iconosListado, .seccionActividad .columna.ultimoMensaje, div#colChat div.recuadro strong>a:first-child {
+div#datosUsuario:not(:has(#login)), span#pfc_ping, a#pfc_logo, div#iconosListado, .seccionActividad .columna.ultimoMensaje, div#colChat div.recuadro strong>a:first-child {
     display: none;
 }
 

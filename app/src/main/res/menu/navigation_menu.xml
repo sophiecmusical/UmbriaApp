@@ -9,9 +9,9 @@
         android:icon="@drawable/ic_news"
         android:title="Noticias"/>
     <item
-        android:id="@+id/chat"
+        android:id="@+id/forum"
         android:icon="@drawable/ic_messages"
-        android:title="Chat"/>
+        android:title="Foro"/>
     <item
         android:id="@+id/messages"
         android:icon="@drawable/ic_mp"
