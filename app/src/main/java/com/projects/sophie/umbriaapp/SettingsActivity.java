@@ -1,4 +1,4 @@
-package com.projects.sophie.umbriaapp;
+package com.projects.mantitagames.umbriaapp;
 
 import android.content.Intent;
 import android.os.Bundle;

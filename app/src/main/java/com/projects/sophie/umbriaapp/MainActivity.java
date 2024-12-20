@@ -1,4 +1,4 @@
-package com.projects.sophie.umbriaapp;
+package com.projects.mantitagames.umbriaapp;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -33,7 +33,7 @@ import android.widget.ProgressBar;
 
 import java.io.InputStream;
 
-import com.projects.sophie.umbriaapp.R;
+import com.projects.mantitagames.umbriaapp.R;
 
 public class MainActivity extends AppCompatActivity {
 

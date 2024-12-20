@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.projects.sophie.umbriaapp"
+    namespace "com.projects.mantitagames.umbriaapp"
     defaultConfig {
-        applicationId "com.projects.sophie.umbriaapp"
+        applicationId "com.projects.mantitagames.umbriaapp"
         minSdkVersion 21
         compileSdk 34
         targetSdkVersion 34
