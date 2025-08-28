@@ -16,8 +16,8 @@
     <SwitchPreferenceCompat
         android:defaultValue="false"
         android:key="tinyeditor"
-        android:summary="Editor Tiny, con opciones para copiar y pegar, seleccionar texto y demás. Si tinyEditor está activado, Ckeditor es ignorado."
-        android:title="Usar TinyEditor" />
+        android:summary="Editor simple, con menos opciones pero más adaptado a mobile. Si está activado, no se usará Ckeditor."
+        android:title="Usar Simple" />
 
     <EditTextPreference
         android:defaultValue=""
