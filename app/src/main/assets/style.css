@@ -30,6 +30,7 @@ textarea.datosMemo {
 
 div#r0.director, .cuadro-tirador legend {
     padding: 3% !important;
+    margin-top: 3em;
 }
 
 .personaje {
@@ -81,7 +82,8 @@ div#opciones_globales a {
 }
 
 #editarMensaje .botones input, #editarMensaje .botones a {
-    padding: 1% !important;
+    padding: 0.5em !important;
+    margin-left:1em;
 }
 
 .detallePJ {
@@ -693,6 +695,8 @@ input#btnNuevo, span.fechaApuntado {
 
 div#uCarisma a, .pref_dcha label, #destinatarios_editar .destinatario, ul.formulario-tirador input {
     font-size: 1em !important;
+    margin-left: 6em;
+    margin-bottom: 1em;
 }
 
 #login input[type="submit"], .botonform input[type="submit"], #login a, #login p{
@@ -721,12 +725,13 @@ form#equipo_pj table.gridDatos th,  form#equipo_pj table.gridDatos td {
 
 .fecha, ul.paginador li a, .basicos, div#listadoForo, #listaEscenas ul a, #datosPartida td, div#solapas ul li a, .destinatarios em,
  .ui-tabs-panel span, td.remitentes, td.asunto, div#dialogEscenas, #dialogWrapper p.pjjugadores {
-    font-size: 2.5em !important;
+    font-size: 3em !important;
 }
 
 #buscadorPjs input:read-write,  div#dialogJugadores ul li, div#dialogVips a, div#emisores, .texto ul > li,
 #editarMensaje .botones input, div#pfc_channels, .novedadesDesde.recuadro, #editarMensaje .botones a, .fichaDatos .botones a, .fichaDatos .botones input, div.tiradas h6, form#formTiradas, #directores li, div#addJugador  {
-    font-size:3em
+    font-size:3.5em;
+    margin-block: 1em;
 }
 
 div.ultimo_mensaje, span.ui-button-text, div#solapa-1 h3, div#solapa-6 h2, div.recuadro.partidas h3, .md_cabecera, #mensajeria h4, .pref_dcha, div.botonera a, div.md_acciones a, form#addPj, #dialogConfigurar h4 {
@@ -790,7 +795,7 @@ a.abierta img {
 }
 
 div.novedades a, div.novedades a:active {
-    width: 100%;
+    width: 45px;
     background-size: 130px;
     height: 45px;
 }
@@ -998,3 +1003,18 @@ div.pfc_nickwhois table, .pfc_nickwhois_pv {
 
 }
 
+.ql-snow.ql-toolbar button {
+  height: 70px !important;
+  width: 90px !important;
+}
+
+
+.ql-toolbar.ql-snow, .ql-container.ql-snow {
+    background-color: white;
+}
+
+
+.ql-container.ql-snow {
+    background-color: white;
+   min-height: 925px;
+}

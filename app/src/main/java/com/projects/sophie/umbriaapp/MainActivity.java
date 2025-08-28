@@ -26,6 +26,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     SwipeRefreshLayout swipeRefreshLayout;
 
     String baseUrl = "https://www.comunidadumbria.com/usuario/novedades/";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,26 +102,52 @@ public class MainActivity extends AppCompatActivity {
 
         if (ckeditor && !tinyeditor) {
             webView.getSettings().setUserAgentString("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36");
-        } else if (tinyeditor) {
-            String script = "if (!document.querySelector('script[src=\"https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js\"]')) {" +
-                    "  var script = document.createElement('script');" +
-                    "  script.src = 'https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js';" +
-                    "  script.type = 'text/javascript';" +
-                    "  document.head.appendChild(script);" +
-                    "}";
-            webView.evaluateJavascript(script, null);
-
-            webView.evaluateJavascript("if (typeof tinymce !== 'undefined') {" +
-                    "tinymce.init({" +
-                    "selector: 'textarea', " +
-                    "plugins: 'advlist autolink lists link image charmap print preview anchor', " +
-                    "toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'" +
-                    "});" +
-                    "}", null);
         }
 
         webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         webView.setScrollbarFadingEnabled(false);
+
+        String simpleTextEditor =
+                "(function(){"
+                        + " function addCss(href,cb){var l=document.createElement('link');l.rel='stylesheet';l.href=href;l.onload=cb;document.head.appendChild(l);} "
+                        + " function addScript(src,cb){var s=document.createElement('script');s.src=src;s.onload=cb;document.head.appendChild(s);} "
+                        + " function hardKillCKE(){ try{ if(window.CKEDITOR && CKEDITOR.instances){ for(var i in CKEDITOR.instances){ try{CKEDITOR.instances[i].destroy(true);}catch(e){} } } }catch(e){} } "
+                        + " function fire(el){ try{ el.dispatchEvent(new Event('input',{bubbles:true})); el.dispatchEvent(new Event('change',{bubbles:true})); }catch(e){} } "
+                        + " function boot(){ "
+                        + "   var qMap=new WeakMap(); "
+                        + "   function makeQuill(ta,idx){ if(!ta || qMap.has(ta)) return; if(!ta.id) ta.id='ta_'+(ta.name||idx||0); "
+                        + "     var box=document.createElement('div'); box.style.height='250px'; box.style.margin='0 0 10px 0'; "
+                        + "     ta.parentNode.insertBefore(box, ta); ta.style.display='none'; "
+                        + "     var quill=new Quill(box,{ theme:'snow', modules:{ toolbar:[[\"bold\",\"italic\",\"underline\",\"strike\"],[{list:'ordered'},{list:'bullet'}],[\"link\",\"image\"]] } }); "
+                        + "     if(ta.value && ta.value.trim()){ quill.clipboard.dangerouslyPasteHTML(ta.value); } "
+                        + "     function sync(){ var html=(quill&&quill.root)?quill.root.innerHTML:''; ta.value=html; fire(ta);} "
+                        + "     quill.once('editor-change', sync); quill.on('text-change', sync); "
+                        + "     qMap.set(ta,{quill:quill,sync:sync}); "
+                        + "     var form=ta.closest('form'); if(form && !form.__quillSync){ form.addEventListener('submit',function(){ "
+                        + "       var tas=form.querySelectorAll('textarea'); for(var i=0;i<tas.length;i++){ var m=qMap.get(tas[i]); if(m&&m.sync) m.sync(); } "
+                        + "     }, true); form.__quillSync=true; } "
+                        + "   } "
+                        + "   hardKillCKE(); "
+                        + "   var tas=document.querySelectorAll('textarea'); for(var i=0;i<tas.length;i++){ makeQuill(tas[i], i); } "
+                        + "   var t0=Date.now(), guard=setInterval(function(){ hardKillCKE(); "
+                        + "     var visibles=document.querySelectorAll('textarea:not([style*=\"display: none\"])'); "
+                        + "     for(var i=0;i<visibles.length;i++){ makeQuill(visibles[i]); } "
+                        + "     if(Date.now()-t0>6000){ clearInterval(guard);} "
+                        + "   },250); "
+                        + "   var mo=new MutationObserver(function(muts){ muts.forEach(function(m){ "
+                        + "     m.addedNodes && m.addedNodes.forEach(function(n){ if(n.nodeType!==1) return; "
+                        + "       if(n.id && /^cke_/.test(n.id)){ try{ n.remove(); }catch(e){} hardKillCKE(); } "
+                        + "       if(n.classList && (n.classList.contains('ck')||n.classList.contains('ck-editor'))){ try{ n.remove(); }catch(e){} } "
+                        + "       if(n.tagName==='TEXTAREA'){ makeQuill(n); } "
+                        + "       if(n.querySelectorAll){ var as=n.querySelectorAll('textarea'); for(var j=0;j<as.length;j++){ makeQuill(as[j]); } } "
+                        + "     }); }); }); "
+                        + "   mo.observe(document.documentElement,{childList:true,subtree:true}); "
+                        + " } "
+                        + " function start(){ addCss('https://cdn.quilljs.com/1.3.7/quill.snow.css', function(){ addScript('https://cdn.quilljs.com/1.3.7/quill.js', boot); }); } "
+                        + " if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', start); } else { start(); } "
+                        + "})();";
+
+
 
         webView.setWebViewClient(new WebViewClient() {
             @Override
@@ -146,6 +175,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (!url.contains("natilla.comunidadumbria.com")) {
                     injectCSS();
+                }
+
+                if (tinyeditor) {
+                    webView.evaluateJavascript(simpleTextEditor, null);
                 }
 
                 super.onPageFinished(view, url);
@@ -250,4 +283,5 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_hamburguer);
         }
     }
+
 }
