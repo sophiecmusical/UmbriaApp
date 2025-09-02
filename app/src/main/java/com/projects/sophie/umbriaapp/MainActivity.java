@@ -119,7 +119,16 @@ public class MainActivity extends AppCompatActivity {
                         + "     ta.parentNode.insertBefore(box, ta); ta.style.display='none'; "
                         + "     var quill=new Quill(box,{ theme:'snow', modules:{ toolbar:[[\"bold\",\"italic\",\"underline\",\"strike\"],[{list:'ordered'},{list:'bullet'}],[\"link\",\"image\"]] } }); "
                         + "     if(ta.value && ta.value.trim()){ quill.clipboard.dangerouslyPasteHTML(ta.value); } "
-                        + "     function sync(){ var html=(quill&&quill.root)?quill.root.innerHTML:''; ta.value=html; fire(ta);} "
+                        + "     function sync(){ " +
+                        "           var html=(quill&&quill.root) ? quill.root.innerHTML : ''; " +
+                "                   var text = quill.getText().trim();" +
+                        "           if (!text) {\n" +
+                        "               ta.value = null;\n" +
+                        "            } else {\n" +
+                        "                ta.value = html.trim();\n" +
+                        "            }" +
+                        "           fire(ta);" +
+                        "       } "
                         + "     quill.once('editor-change', sync); quill.on('text-change', sync); "
                         + "     qMap.set(ta,{quill:quill,sync:sync}); "
                         + "     var form=ta.closest('form'); if(form && !form.__quillSync){ form.addEventListener('submit',function(){ "

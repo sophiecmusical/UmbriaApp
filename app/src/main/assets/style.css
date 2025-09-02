@@ -821,12 +821,8 @@ a#iconoCreditos, a#iconosFicheros, a#iconoIncidencias, a#iconoCarnet, a#iconoCap
     display: none !important;
 }
 
-div#m_8, div#m_9, div#m_16m, div.md_cabecera span.md_texto {
+div.md_cabecera span.md_texto {
     display:none !important;
-}
-
-div:has(> div.listaPartidas) {
-    display: none !important;
 }
 
 div#datosUsuario:not(:has(#login)), span#pfc_ping, a#pfc_logo, div#iconosListado, .seccionActividad .columna.ultimoMensaje, div#colChat div.recuadro strong>a:first-child {
@@ -1017,4 +1013,12 @@ div.pfc_nickwhois table, .pfc_nickwhois_pv {
 .ql-container.ql-snow {
     background-color: white;
    min-height: 925px;
+}
+
+#navegador > div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 2em;
+    margin-bottom: 1em;
 }

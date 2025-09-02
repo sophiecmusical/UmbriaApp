@@ -17,7 +17,7 @@
         android:defaultValue="false"
         android:key="tinyeditor"
         android:summary="Editor simple, con menos opciones pero más adaptado a mobile. Si está activado, no se usará Ckeditor."
-        android:title="Usar Simple" />
+        android:title="Usar Editor Simple" />
 
     <EditTextPreference
         android:defaultValue=""
