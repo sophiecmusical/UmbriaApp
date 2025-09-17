@@ -1,9 +1,18 @@
 /* Cambios de tamaño: paddings, margins, width... */
 
+table.bbcodeTable {
+  font-size: 3em;
+}
+
 #avisos {
 float: none;
 display: block;
 }
+
+.ul.novedades li span {
+    margin-right: 12px;
+}
+
 .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable {
     top: 0px !important;
     width: 101% !important;
@@ -28,9 +37,16 @@ textarea.datosMemo {
     margin-bottom: 3%;
 }
 
-div#r0.director, .cuadro-tirador legend {
+.cuadro-tirador legend {
     padding: 3% !important;
     margin-top: 3em;
+}
+
+div#r0.director {
+    padding: 4em !important;
+    margin-top: 3em !important;
+    width: 60%;
+    border-radius: 13px;
 }
 
 .personaje {
@@ -70,20 +86,47 @@ form#addPj input.boton {
 
 .novedadesDesde input[type="submit"] {
     font-size: inherit;
+    float: none;
+    border-radius: 1em;
 }
 
 .adding{
     height: auto !important;
 }
 
+div#opciones_globales {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    line-height: 6em;
+    flex-wrap: wrap;
+    margin-bottom: 4em;
+}
+
 div#opciones_globales a {
-    margin: 1%;
-    display: inline-flex;
+   padding: 0.5em 1em;
+}
+
+#editarMensaje .botones {
+    margin: 8px 5em;
+    display: flex;
+    gap: 5em;
+    justify-content: space-evenly;
+}
+
+#editarMensaje .botones input {
+    font-weight: bold;
+    background-color: #ffffff;
 }
 
 #editarMensaje .botones input, #editarMensaje .botones a {
-    padding: 0.5em !important;
-    margin-left:1em;
+    padding: 1em !important;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
 }
 
 .detallePJ {
@@ -99,9 +142,14 @@ div#dialogWrapper, div#dialogJugadores {
     width: 12em !important;
     height: 17em !important;
     border: 3px solid #663254;
+        width: 17em !important;
+        height: 25em !important;
+        border: 3px solid #663254 !important;
+        object-fit: cover;
 }
 
 .listaPartidas {
+padding-top:1em;
     padding-bottom: 3em !important;
 }
 
@@ -154,9 +202,16 @@ div#avatar img {
     height: 5em;
 }
 
+.destinatarios {
+    display: flex;
+    gap: 1em;
+}
+
 .destinatarios img {
-    width: 6em;
-    height: 7em;
+       width: 9em;
+       height: 10em;
+       object-fit: cover;
+       border-radius: 8px;
 }
 
 .destinatarios em {
@@ -190,10 +245,12 @@ div#login {
     padding-bottom: 10%;
 }
 
+
 .novedadesDesde span {
-    display: block;
-    font-style: italic;
-    padding-bottom: 0.5em !important;
+   display: block !important;
+   font-style: italic !important;
+   padding-bottom: 0.5em !important;
+   font-size: 0.75em;
 }
 
 .novedadesDesde input[name="btnMostrarFecha"] {
@@ -267,6 +324,12 @@ div.noticia span.fecha {
 
 span.noleidos {
     font-size: inherit !important;
+}
+
+#portadaPartida {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
 .recuadroInterno img.portadaPartida {
@@ -465,10 +528,9 @@ div#iconosUsuario a {
     padding: 0.5em !important;
 }
 
-ul.paginador li {
-    padding-top: 2em !important;
-    padding-bottom: 1em !important;
-    margin-bottom: 1em;
+body ul.paginador li {
+    padding: 2em 3em;
+    display: inline-flex;
 }
 
 ul.paginador {
@@ -490,6 +552,10 @@ div#wrapper {
 
 div#contenedor {
     padding: 2%;
+        padding: 2% !important;
+        display: flex;
+        flex-direction: column;
+        flex-flow: column-reverse;
 }
 
 div#datosPartida .recuadro table td {
@@ -501,7 +567,7 @@ div#datosPartida .recuadro table td {
     height: 4em;
 }
 
-div.escena {
+div.escena:not(:first-child) {
     margin-top: 5%;
 }
 
@@ -521,7 +587,8 @@ div#escenas {
 }
 
 input#btnNuevo {
-    padding: 0.2em;
+    padding: 1em 2em;
+    margin-bottom: 1em;
 }
 
 h3#escena span {
@@ -657,7 +724,7 @@ div.ultimo_mensaje{
 
 #destinatarios_editar .destinatario {
     padding: 1% !important;
-    width: auto !important;
+    width: 80%;
     height: auto !important;
 }
 
@@ -670,10 +737,14 @@ div.ultimo_mensaje{
 div#emisores select, .cuadro-tirador select, .novedadesDesde select{
     font-size: inherit;
     padding: 0.3em;
+    margin-bottom: 0.5em;
 }
 
 .novedadesDesde input[name="btnFijarFecha"] {
-    width: 100%;
+        width: 75%;
+        text-wrap: auto;
+        font-size: 0.8em !important;
+
 }
 
 .cuadro-tirador .inputTirar {
@@ -747,7 +818,7 @@ div#verTodos {
 }
 
 p, .pj, #usuario, div.escena h4, ul.novedades > li, .personaje p {
-    font-size: 3.5em !important;
+    font-size: 3.8em !important;
 }
 
 h2, #datosPartida h4,  div#opciones_globales a, textarea {
