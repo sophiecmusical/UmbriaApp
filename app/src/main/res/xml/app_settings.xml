@@ -14,7 +14,7 @@
         android:title="Usar CKEditor" />
 
     <SwitchPreferenceCompat
-        android:defaultValue="false"
+        android:defaultValue="true"
         android:key="tinyeditor"
         android:summary="Editor simple, con menos opciones pero más adaptado a mobile. Si está activado, no se usará Ckeditor."
         android:title="Usar Editor Simple" />

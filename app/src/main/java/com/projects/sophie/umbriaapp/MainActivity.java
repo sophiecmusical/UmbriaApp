@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         user = sharedPref.getString("user", "");
         pass = sharedPref.getString("pass", "");
         Boolean ckeditor = sharedPref.getBoolean("ckeditor", false);
-        tinyeditor = sharedPref.getBoolean("tinyeditor", false);
+        tinyeditor = sharedPref.getBoolean("tinyeditor", true);
 
         progressBar = findViewById(R.id.progressBar);
         setWebViewConfig(ckeditor);
