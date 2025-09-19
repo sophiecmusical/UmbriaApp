@@ -7,8 +7,8 @@ android {
         minSdkVersion 21
         compileSdk 35
         targetSdkVersion 35
-        versionCode 9
-        versionName "Return of jedieditor"
+        versionCode 10
+        versionName "Return of jedi update"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
