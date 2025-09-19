@@ -118,25 +118,39 @@ public class MainActivity extends AppCompatActivity {
                         + "     var box=document.createElement('div'); box.style.height='250px'; box.style.margin='0 0 10px 0'; "
                         + "     ta.parentNode.insertBefore(box, ta); ta.style.display='none'; "
                         + "     var quill=new Quill(box,{ theme:'snow', modules:{ toolbar:[[\"bold\",\"italic\",\"underline\",\"strike\"],[{list:'ordered'},{list:'bullet'}],[\"link\",\"image\"]] } }); "
-                        + "     if(ta.value && ta.value.trim()){ quill.clipboard.dangerouslyPasteHTML(ta.value); } "
+                        + "     if(ta.value && ta.value.trim()){ quill.clipboard.dangerouslyPasteHTML(ta.value); } else { ta.value = ''; ta.removeAttribute('value'); } "
                         + "     function sync(){ " +
-                        "           var html=(quill&&quill.root) ? quill.root.innerHTML : ''; " +
-                "                   var text = quill.getText().trim();" +
-                        "           if (!text) {\n" +
-                        "               ta.value = null;\n" +
-                        "            } else {\n" +
-                        "                ta.value = html.trim();\n" +
+                        "           var text = quill.getText().trim();" +
+                        "           if (!text || text.length === 0) {" +
+                        "               ta.value = '';" +
+                        "               ta.removeAttribute('value');" +
+                        "            } else {" +
+                        "                var html=(quill&&quill.root) ? quill.root.innerHTML : ''; " +
+                        "                var tempDiv = document.createElement('div');" +
+                        "                tempDiv.innerHTML = html;" +
+                        "                var textContent = tempDiv.textContent || tempDiv.innerText || '';" +
+                        "                if (!textContent.trim() || textContent.trim().length === 0) {" +
+                        "                    ta.value = '';" +
+                        "                    ta.removeAttribute('value');" +
+                        "                } else {" +
+                        "                    ta.value = html;" +
+                        "                }" +
                         "            }" +
                         "           fire(ta);" +
                         "       } "
                         + "     quill.once('editor-change', sync); quill.on('text-change', sync); "
                         + "     qMap.set(ta,{quill:quill,sync:sync}); "
-                        + "     var form=ta.closest('form'); if(form && !form.__quillSync){ form.addEventListener('submit',function(){ "
-                        + "       var tas=form.querySelectorAll('textarea'); for(var i=0;i<tas.length;i++){ var m=qMap.get(tas[i]); if(m&&m.sync) m.sync(); } "
+                        + "     var form=ta.closest('form'); if(form && !form.__quillSync){ form.addEventListener('submit',function(e){ "
+                        + "       var tas=form.querySelectorAll('textarea'); for(var i=0;i<tas.length;i++){ var m=qMap.get(tas[i]); if(m&&m.sync) m.sync(); " +
+                        "         var ta=tas[i]; if(ta.value && ta.value.trim()){ var tempDiv=document.createElement('div'); tempDiv.innerHTML=ta.value; " +
+                        "         var textContent=tempDiv.textContent||tempDiv.innerText||''; if(!textContent.trim()){ ta.value=''; ta.removeAttribute('value'); } } } "
                         + "     }, true); form.__quillSync=true; } "
                         + "   } "
                         + "   hardKillCKE(); "
-                        + "   var tas=document.querySelectorAll('textarea'); for(var i=0;i<tas.length;i++){ makeQuill(tas[i], i); } "
+                        + "   var tas=document.querySelectorAll('textarea'); for(var i=0;i<tas.length;i++){ " +
+                        "     var ta=tas[i]; if(ta.value){ var tempDiv=document.createElement('div'); tempDiv.innerHTML=ta.value; " +
+                        "     var textContent=tempDiv.textContent||tempDiv.innerText||''; if(!textContent.trim()){ ta.value=''; ta.removeAttribute('value'); } } " +
+                        "     makeQuill(ta, i); } "
                         + "   var t0=Date.now(), guard=setInterval(function(){ hardKillCKE(); "
                         + "     var visibles=document.querySelectorAll('textarea:not([style*=\"display: none\"])'); "
                         + "     for(var i=0;i<visibles.length;i++){ makeQuill(visibles[i]); } "
