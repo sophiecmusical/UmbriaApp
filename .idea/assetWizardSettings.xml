@@ -24,7 +24,19 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Sophie\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="/tmp/outline_cookie_24.xml" />
+                                                <entry key="opacityPercent" value="60" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="clipartAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialsymbolsoutlined/cookie/outline_cookie_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -54,6 +66,11 @@
                                       </entry>
                                     </map>
                                   </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="outputName" value="ic_natilla" />
+                                    </map>
+                                  </option>
                                 </PersistentState>
                               </value>
                             </entry>
@@ -68,18 +85,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Sophie\AppData\Local\Temp\outline_coffee_24.xml" />
-                                              </map>
-                                            </option>
-                                          </PersistentState>
-                                        </value>
-                                      </entry>
-                                      <entry key="foregroundClipartAsset">
-                                        <value>
-                                          <PersistentState>
-                                            <option name="values">
-                                              <map>
-                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material/icons/materialiconsoutlined/coffee/outline_coffee_24.xml" />
+                                                <entry key="imagePath" value="/tmp/ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -140,7 +146,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Sophie\AppData\Local\Temp\baseline_coffee_24.xml" />
+                                                <entry key="imagePath" value="/tmp/outline_cookie_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -151,7 +157,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/coffee/baseline_coffee_24.xml" />
+                                                <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialsymbolsoutlined/cookie/outline_cookie_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -200,7 +206,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Sophie\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="/tmp/ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -264,7 +270,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="imagePath" value="C:\Users\Sophie\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="/tmp/ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -312,7 +318,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
+                            <entry key="outputIconType" value="ACTIONBAR" />
                           </map>
                         </option>
                       </PersistentState>
