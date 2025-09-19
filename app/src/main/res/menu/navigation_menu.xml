@@ -17,6 +17,10 @@
         android:icon="@drawable/ic_mp"
         android:title="Mensajes privados (MPs)"/>
     <item
+        android:id="@+id/natilla"
+        android:icon="@drawable/ic_natilla"
+        android:title="Natilla"/>
+    <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_profile"
         android:title="Perfil"/>

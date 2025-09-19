@@ -252,6 +252,8 @@ public class MainActivity extends AppCompatActivity {
                 webView.loadUrl("https://www.comunidadumbria.com/comunidad/foros");
             } else if (itemId == R.id.messages) {
                 webView.loadUrl("https://www.comunidadumbria.com/usuario/mensajes");
+            } else if (itemId == R.id.natilla) {
+                webView.loadUrl("https://natilla.comunidadumbria.com/usuarios/panel");
             } else if (itemId == R.id.settings) {
                 startActivity(new Intent(MainActivity.this, SettingsActivity.class));
             } else if (itemId == R.id.sign_out) {

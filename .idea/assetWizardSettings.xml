@@ -338,7 +338,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/coffee/baseline_coffee_24.xml" />
+                                      <entry key="url" value="jar:file:/home/sophie/.local/share/JetBrains/Toolbox/apps/android-studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/icecream/baseline_icecream_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -348,8 +348,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="natilla" />
-                            <entry key="sourceFile" value="C:\Users\Sophie\Documents\develop\ComunidadUmbriaApp" />
+                            <entry key="outputName" value="ic_icecream_24" />
+                            <entry key="sourceFile" value="$USER_HOME$/C:\Users\Sophie\Documents\develop\ComunidadUmbriaApp" />
                           </map>
                         </option>
                       </PersistentState>
